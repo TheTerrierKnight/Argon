@@ -8,7 +8,7 @@ import turtle
 import time
 
 # Master Mode
-ModeController=1
+ModeController=6
 # 1 = Basic Scearch Engine
 # 2 = Time Checker
 # 3 = Codemaker
@@ -34,7 +34,7 @@ if ModeController == 1:
         "videos": ["https://...", "..."],
     },
     # Add more prompts and responses here
-}
+ }
 
  def search(prompt):
   """Simulates a search engine by returning predefined responses."""
@@ -169,3 +169,65 @@ if ModeController == 6:
  for seconds in range(1, 11):  # Loop from 1 to 10
     print(f"Time passed: {seconds} seconds")
     time.sleep (1)
+
+ if ModeController == 6:
+ # Create the screen and set the background color
+  screen = turtle.Screen()
+ screen.bgcolor("lightblue")
+
+ # Draw the planet
+ planet = turtle.Turtle()
+ planet.penup()
+ planet.goto(0, -100)
+ planet.pendown()
+ planet.fillcolor("lightgreen")
+ planet.begin_fill()
+ planet.circle(50)
+ planet.end_fill()
+
+ # Draw more mountains with a loop
+ num_mountains = 5
+ for i in range(num_mountains):
+  mountain = turtle.Turtle()
+  mountain.penup()
+  mountain.goto(-150 + (60 * i), -50)  # Adjust spacing as needed
+  mountain.pendown()
+  mountain.fillcolor("gray")
+  mountain.begin_fill()
+  mountain.left(140)
+  mountain.forward(100)
+  mountain.right(120)
+  mountain.forward(100)
+  mountain.right(120)
+  mountain.forward(100)
+  mountain.end_fill()
+
+ # Draw more trees with a loop
+ num_trees = 8
+ for i in range(num_trees):
+  tree = turtle.Turtle()
+  tree.penup()
+  tree.goto(-120 + (60 * i), 0)  # Adjust spacing and positioning as needed
+  tree.pendown()
+  tree.fillcolor("brown")
+  tree.begin_fill()
+  tree.left(90)
+  tree.forward(20)
+  tree.right(90)
+  tree.forward(10)
+  tree.right(90)
+  tree.forward(20)
+  tree.left(90)
+  tree.forward(10)
+  tree.end_fill()
+
+  tree.penup()
+  tree.goto(-120 + (60 * i), 20)
+  tree.pendown()
+  tree.fillcolor("green")
+  tree.begin_fill()
+  tree.circle(15)
+  tree.end_fill()
+
+ # Keep the window open until closed manually
+ turtle.done()
