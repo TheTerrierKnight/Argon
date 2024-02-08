@@ -2,13 +2,13 @@
 #Careful when using!
 
 
-# INPORTED LIBARIES
+# IMPORTED LIBARIES
 
 
 
 # Master Mode
-ModeController=1
-
+ModeController=2
+# 1 = Basic Scearch Engine
 
 
 
@@ -30,7 +30,7 @@ if ModeController == 1:
     # Add more prompts and responses here
 }
 
-def search(prompt):
+ def search(prompt):
   """Simulates a search engine by returning predefined responses."""
   prompt = prompt.lower()
   if prompt in responses:
@@ -38,12 +38,12 @@ def search(prompt):
   else:
     return f"Sorry, I couldn't find anything related to '{prompt}'."
 
-# Get user input
-prompt = input("Search for something: ")
+ # Get user input
+ prompt = input("Search for something: ")
 
-# Simulate search and display results
-results = search(prompt)
-if results:
+ # Simulate search and display results
+ results = search(prompt)
+ if results:
   print(f"Wikipedia: {results['wikipedia']}")
   print("Images:")
   for image in results["images"]:
@@ -51,7 +51,19 @@ if results:
   print("Videos:")
   for video in results["videos"]:
     print(f"- {video}")
-else:
+ else:
   print(results)
 
-print("Remember, this is just a sample script. Real search engines access and process vast amounts of information from the internet.")
+ print("Remember, this is just a sample script. Real search engines access and process vast amounts of information from the internet.")
+
+if ModeController == 2:
+  from datetime import datetime
+
+ # Get the current date and time
+  now = datetime.now()
+
+ # Format the date and time in a user-friendly way
+  current_time = now.strftime("%H:%M:%S")
+
+ # Print the current time to the console
+  print(f"The current time is: {current_time}")
