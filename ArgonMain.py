@@ -1,5 +1,22 @@
+# Argon V1.0 Prebuild
+#Careful when using!
+
+
+# INPORTED LIBARIES
+
+
+
+# Master Mode
+ModeController=1
+
+
+
+
+
+
+if ModeController == 1:
 # Simulated search engine responses
-responses = {
+ responses = {
     "dog": {
         "wikipedia": "https://en.wikipedia.org/wiki/Dog",
         "images": ["https://...", "..."],
