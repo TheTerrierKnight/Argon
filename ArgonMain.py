@@ -8,14 +8,15 @@ import turtle
 import time
 
 # Master Mode
-ModeController=6
+ModeController=8
 # 1 = Basic Scearch Engine
 # 2 = Time Checker
 # 3 = Codemaker
 # 4 = Buffer
 # 5 = Sun Maker
 # 6 = Timer
-
+# 7 = Advanced Turtle Drawer V2
+# 8 = Statements
 
 
 
@@ -170,9 +171,10 @@ if ModeController == 6:
     print(f"Time passed: {seconds} seconds")
     time.sleep (1)
 
- if ModeController == 6:
+
+if ModeController == 7:
  # Create the screen and set the background color
-  screen = turtle.Screen()
+ screen = turtle.Screen()
  screen.bgcolor("lightblue")
 
  # Draw the planet
@@ -231,3 +233,41 @@ if ModeController == 6:
 
  # Keep the window open until closed manually
  turtle.done()
+
+
+
+if ModeController == 8:
+ 
+ def draw_tree():
+    turtle.pendown()
+    turtle.color("brown")
+    turtle.begin_fill()
+    for i in range(4):
+     turtle.forward(20)
+     turtle.right(90)
+     turtle.end_fill()
+  
+     turtle.color("green")
+     turtle.begin_fill()
+     turtle.forward(10)
+     turtle.circle(35)
+     turtle.end_fill()
+     turtle.penup()
+ 
+ draw_tree()
+ 
+ 
+ 
+ def Random_position():
+  coords=random.randint(-150,150)
+  turtle.goto(coords,coords)
+  turtle.pendown()
+  draw_tree()
+  
+ 
+ Random_position()
+ Random_position()
+ Random_position()
+
+ turtle.done()
+
