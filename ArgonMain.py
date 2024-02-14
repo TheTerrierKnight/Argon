@@ -265,9 +265,13 @@ if ModeController == 8:
   draw_tree()
   
  
- Random_position()
- Random_position()
- Random_position()
+ for _ in range(90):
+  Random_position()
+ 
 
  turtle.done()
 
+
+if ModeController == 9:
+  turtle.addshape
+  # NOT FINISHED
