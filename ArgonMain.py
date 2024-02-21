@@ -8,7 +8,8 @@ import turtle
 import time
 
 # Master Mode
-ModeController=8
+ModeController=9 
+
 # 1 = Basic Scearch Engine
 # 2 = Time Checker
 # 3 = Codemaker
@@ -17,6 +18,7 @@ ModeController=8
 # 6 = Timer
 # 7 = Advanced Turtle Drawer V2
 # 8 = Statements
+# 9 = Command Bar
 
 
 
@@ -273,5 +275,22 @@ if ModeController == 8:
 
 
 if ModeController == 9:
-  turtle.addshape
-  # NOT FINISHED
+  while True:
+   command = input("Enter a Command: ")
+   if command == "forward":
+    distance = float(input("Provide Distance of Movement: "))
+    turtle.forward(distance)
+   if command == "backward":
+    distance = float(input("Provide Distance of Movement: "))
+    turtle.backward(distance)
+   if command == "left":
+    distance = float(input("Provide Distance of Movement: "))
+    turtle.left(distance)
+   if command == "right":
+    distance = float(input("Provide Distance of Movement: "))
+    turtle.right(distance)
+   if command == "color select":
+    color = float(input("Provide Color: "))
+    turtle.color(color)
+   if command == "exit":
+    turtle.done()
