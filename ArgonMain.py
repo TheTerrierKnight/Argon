@@ -290,7 +290,7 @@ if ModeController == 9:
     distance = float(input("Provide Distance of Movement: "))
     turtle.right(distance)
    if command == "color select":
-    color = float(input("Provide Color: "))
+    color = str(input("Provide Color: "))
     turtle.color(color)
    if command == "exit":
     turtle.done()
